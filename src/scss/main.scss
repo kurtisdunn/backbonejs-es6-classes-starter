@@ -1,24 +1,27 @@
-@import 'bootstrap';
+//@import 'fonts';
+// @import '_variables';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-html, body {
-  //color: #3F4041;
-  height: 100%;
-}
+$dark: #333;
+$light: lighten(yellowgreen, 0%);
 
-html {
-  background:#edf3f3;
-}
-
-body {
-	background-color: transparent;
+html, body{
+  background: $light;
+  min-height:100%
 }
 
 h1{
-  font-size: 1.5rem
+  //font-size: 20.2vmin;
+  color:#333;
+}
+pre{
+  background: lighten($light, 30%)!important;
+}
+main{
+  margin-top:60px;
+  font-size:38px!important;
 }
 
-.main{
-  padding: 15px 15px;
-  background: #fff;
-  min-height:100%;
+#heading{
+  display:none;
 }
