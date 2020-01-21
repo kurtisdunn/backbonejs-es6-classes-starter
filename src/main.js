@@ -1,24 +1,22 @@
+import './scss/main.scss';
 import Router from './router';
 
-const Heffron = {
+const AppContainer = {
   Collections: {},
   Models: {},
   Views: {}
 };
 
 class App {
-
   constructor () {
     new Router();
     if (this.debug()) {
-      window.Heffron = Heffron;
+      window.App = App;
     }
   }
-
   debug (){
     return true;
   }
-
 }
 
 //- start app --------------------
@@ -26,4 +24,4 @@ class App {
   new App();
 })();
 
-export default { Heffron };
+export default { AppContainer };

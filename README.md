@@ -29,6 +29,7 @@ All development files should go under `src`. The base structure is:
 -- views/      # Backbone Views.
 -- index.html  # Main SPA view.
 -- main.js     # Main JavaScript file imported by index.html.
+-- routes.js     # Route Map.
 
 ```
 
@@ -40,12 +41,11 @@ The `src/main.js` is the main file that the entire build is based off of.
 
 ### Building
 
-The only command you should need during development is `npm run build-watch`. This will:
+The only command you should need during development is `npm start`. This will:
 ```
 1. Clean the `dist` folder.
-2. Run `npm run build`.
-3. Watch source files and re-run `npm run build` if any files in `src` change.
-4. Start a webserver, enable live-reload, serve `dist` and open it in your browser.
+2. Run webpack dev server.
+3. Start a webserver, enable live-reload, serve `dist` and open it in your browser.
 ```
 
 
@@ -99,7 +99,7 @@ export default class Gits extends Backbone.Collection {
   }
 
   url(){
-    return 'https://raw.githubusercontent.com/kurtis-dunn/backbonejs-es6-classes-starter/master/README.md';
+    return 'https://raw.githubusercontent.com/kurtisdunn/backbonejs-es6-classes-starter/master/README.md';
   }
 
   parse(response){
@@ -123,7 +123,6 @@ import Backbone from 'backbone';
 import _ from 'underscore';
 import $ from 'jquery';
 import hljs from 'highlightjs/highlight.pack.js';
-import 'highlightjs/styles/monokai.css';
 import Gits from '../collections/gits';
 
 export default class BaseView extends Backbone.View {
@@ -137,7 +136,7 @@ export default class BaseView extends Backbone.View {
   }
 
   initialize() {
-    console.log('App.BaseView()');
+    console.log('App.Views.BaseView()');
     this.fetchReadme();
   }
 
@@ -180,4 +179,5 @@ export default class BaseView extends Backbone.View {
   }
 
 }
+
 ```
