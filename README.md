@@ -13,7 +13,7 @@ npm build
 
 ```
 npm install
-npm run dev
+npm start
 ```
 
 ### Structure
