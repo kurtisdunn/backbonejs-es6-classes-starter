@@ -2,7 +2,6 @@ import Backbone from 'backbone';
 import _ from 'underscore';
 import $ from 'jquery';
 import hljs from 'highlightjs/highlight.pack.js';
-import 'highlightjs/styles/monokai.css';
 import Gits from '../collections/gits';
 
 export default class BaseView extends Backbone.View {

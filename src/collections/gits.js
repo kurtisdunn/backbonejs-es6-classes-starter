@@ -12,7 +12,7 @@ export default class Gits extends Backbone.Collection {
   }
 
   url(){
-    return 'https://raw.githubusercontent.com/kurtis-dunn/backbonejs-es6-classes-starter/master/README.md';
+    return 'https://raw.githubusercontent.com/kurtisdunn/backbonejs-es6-classes-starter/master/README.md';
   }
 
   parse(response){
